@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/header.css" />
+    <script src="js/greetings.js" defer></script>
+    <script src="js/clock.js" defer></script>
+    <script src="js/quotes.js" defer></script>
+    <script src="js/background.js" defer></script>
+    <script src="js/todo.js" defer></script>
+    <script src="js/weather.js" defer></script>
+    <script src="js/date.js" defer></script>
+  </head>
+  <body>
+    <header id="header">
+      <form class="hidden" id="login-form">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          placeholder="Please enter your name"
+        />
+        <button>Log In</button>
+      </form>
+      <h1 id="greeting" class="hidden"></h1>
+    </header>
+
+    <main class="main">
+      <div class="main-screen">
+        <div class="main-screen__column">
+          <!-- 시간 -->
+          <div class="main-screen__column--clock">
+            <div class="clock__hours">00:00:00</div>
+            <span class="clock__seconds"></span>
+            <div class="clock__minutes">00:00:00</div>
+          </div>
+          <!-- 날짜 -->
+          <div class="main-screen__column--date">
+            <span class="month"></span>
+            <span class="date"></span>
+            <span class="day"></span>
+          </div>
+          <!-- 지역 및 날씨 -->
+          <div class="main-screen__column--regionAndweather">
+            <div class="region"></div>
+            <span class="wheather--icon"></span>
+            <span class="weather"></span>
+            <span class="temperture"></span>
+          </div>
+        </div>
+
+        <div class="main-screen__column">
+          <span>To-do List</span>
+          <form id="todo-form">
+            <input type="text" placeholder="Please enter To-do" required />
+          </form>
+          <ul id="todo-list"></ul>
+        </div>
+
+        <div class="main-screen__column">
+          <div id="quote">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

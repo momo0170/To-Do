@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Boogaloo&family=Fredoka&family=Open+Sans:wght@400;600;700&family=Red+Hat+Mono:wght@500&family=Roboto:wght@100&display=swap');
+
+:root {
+  /* color */
+  --color-dark-brown: #4b270c;
+}
+body {
+  margin: 0;
+  margin-top: 20px;
+  background-color: #e8aa7c;
+  font-family: 'Boogaloo', cursive;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.main-screen {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 60vw;
+  height: 60vh;
+  margin: 0 40px;
+  margin-top: 50px;
+}
+
+.main-screen .main-screen__column:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+}
+
+.main-screen .main-screen__column:last-child {
+  width: 33%;
+}
+
+@keyframes Clockseconds {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.main-screen__column--clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#clock,
+#greeting,
+#quote {
+  color: var(--color-dark-brown);
+}
+
+.clock__hours,
+.clock__minutes {
+  font-size: 150px;
+  color: var(--color-dark-brown);
+}
+
+.clock__seconds {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-dark-brown);
+  animation: Clockseconds 1s ease-in-out infinite;
+}
+
+/* 날짜 */
+.main-screen__column--date {
+  font-size: 40px;
+  color: var(--color-dark-brown);
+}
+
+/* 지역 및 날씨 */
+.main-screen__column--regionAndweather {
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
+  color: var(--color-dark-brown);
+}
+
+.main-screen .main-screen__column:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  color: var(--color-dark-brown);
+}
+
+.main-screen__column:nth-child(2) span {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#todo-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#todo-form input {
+  width: 90%;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Boogaloo', cursive;
+  background-color: transparent;
+  border: none;
+}
+
+#todo-form input::placeholder {
+  color: #6d4c41;
+}
+
+#todo-form input:focus {
+  outline: 0;
+}
+#todo-form input[type='text'] {
+  color: var(--color-dark-brown);
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  width: 50%;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#todo-list li span {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+#todo-list li button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
