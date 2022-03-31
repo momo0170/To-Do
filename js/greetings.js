@@ -9,8 +9,9 @@ const greeting = document.querySelector('#greeting');
 const HIDDEN_CLASSNAME = 'hidden';
 const USERNAME_KEY = 'username';
 
+// 입력한 값을 인자로 함수 실행
 function paintGreetings(username) {
-  greeting.innerText = `Hello ${username}`; // id가 greeting인 태그에 내용을 추가
+  greeting.innerText = `Hello, ${username}!`; // id가 greeting인 태그에 내용을 추가
   greeting.classList.remove(HIDDEN_CLASSNAME); // id가 greeting인 클래스에 hidden을 제거해서 보이게 함
 }
 
