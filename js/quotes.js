@@ -53,28 +53,20 @@ const quotes = [
 
 const quote = document.querySelectorAll('.quote span:first-child'); // 명언이 들어갈 span
 const author = document.querySelectorAll('.quote span:last-child'); // 작가가 들어갈 span
-// console.log(author); // 5개의 span이 있는 배열
-// console.log(quote); // 5개의 span이 있는 배열
+console.log(author); // 5개의 span이 있는 배열
+console.log(quote); // 5개의 span이 있는 배열
 
 // 10개의 명언 중에서 랜덤한 명언 1개를 뽑아서 새로운 배열을 생성한 후, 이를 5번 반복
-// function randomQuote() {
+const newArr = [];
 for (i = 0; i < 5; i++) {
   const todaysQuote = quotes.splice(
     Math.floor(Math.random() * quotes.length),
     1
   );
-  // console.log(todaysQuote); // 랜덤으로 생성된 1개의 명언 배열
-  if (quote[i] === null) {
-    quote[i].innerText = todaysQuote[0].quote; // 명언 span에 랜덤한 명언을 추가
-    author[i].innerText = todaysQuote[0].author; // 작가 span에 랜덤한 작가를 추가
-  } else {
-    quote[i].innerText = '';
-    author[i].innerText = '';
-    quote[i].innerText = todaysQuote[0].quote;
-    author[i].innerText = todaysQuote[0].author;
-  }
+  const value = todaysQuote[0]; // quote, author가 담긴 오브젝트
+  newArr.push(value);
+  quote[i].innerText = newArr[i].quote;
+  author[i].innerText = newArr[i].author;
 }
-// }
-
-// randomQuote();
-// setInterval(randomQuote, 10000);
+// quote[i].innerText = todaysQuote[0].quote; // 명언 span에 랜덤한 명언을 추가
+// author[i].innerText = todaysQuote[0].author; // 작가 span에 랜덤한 작가를 추가
