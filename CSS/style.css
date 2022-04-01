@@ -169,6 +169,7 @@ img {
 
 .quote span:last-child {
   margin-left: auto;
+  margin-top: 10px;
 }
 
 @keyframes QuoteAnimation {

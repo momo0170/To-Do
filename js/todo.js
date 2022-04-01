@@ -56,3 +56,13 @@ if (savedToDos !== null) {
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
 }
+
+todoInput.addEventListener('focus', (event) => {
+  const placeholder = event.target.attributes[1];
+  placeholder.value = '';
+});
+
+todoInput.addEventListener('blur', (event) => {
+  const placeholder = event.target.attributes[1];
+  placeholder.value = 'Please enter To-do';
+});

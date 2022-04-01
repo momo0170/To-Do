@@ -31,6 +31,16 @@ if (savedUsername === null) {
   paintGreetings(savedUsername); // localStorage에 값이 있으면 해당 값을 태그 내용에 추가하고 hidden을 없애서 보이게 함
 }
 
+loginInput.addEventListener('focus', (event) => {
+  const placeholder = event.target.attributes[3];
+  placeholder.value = '';
+});
+
+loginInput.addEventListener('blur', (event) => {
+  const placeholder = event.target.attributes[3];
+  placeholder.value = 'Please enter your name';
+});
+
 // 정리
 // submit은 form 안의 요소에서 엔터를 누르거나 버튼을 클릭할 때 발생한다.
 // preventDefault - 어떤 이벤트의 기본 행동이 발생되지 않도록 막는 함수
