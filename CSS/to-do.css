@@ -1,0 +1,49 @@
+#todo-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#todo-form input {
+  width: 90%;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Boogaloo', cursive;
+  background-color: transparent;
+  border: none;
+}
+
+#todo-form input::placeholder {
+  color: #6d4c41;
+}
+
+#todo-form input:focus {
+  outline: 0;
+}
+#todo-form input[type='text'] {
+  color: var(--color-dark-brown);
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  width: 60%;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#todo-list li span {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+#todo-list li button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

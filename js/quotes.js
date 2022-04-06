@@ -58,7 +58,7 @@ console.log(quote); // 5개의 span이 있는 배열
 
 // 10개의 명언 중에서 랜덤한 명언 1개를 뽑아서 새로운 배열을 생성한 후, 이를 5번 반복
 const newArr = [];
-for (i = 0; i < 5; i++) {
+for (i = 0; i < 4; i++) {
   const todaysQuote = quotes.splice(
     Math.floor(Math.random() * quotes.length),
     1

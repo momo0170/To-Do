@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Boogaloo&family=Fredoka&family=Open+Sans:wght@400;600;700&family=Red+Hat+Mono:wght@500&family=Roboto:wght@100&display=swap');
+@import '/CSS/to-do.css';
+@import '/CSS/header.css';
 
 :root {
   /* color */
@@ -16,7 +18,7 @@ img {
   top: 0;
   z-index: -1;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .main {
@@ -28,10 +30,10 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  width: 75vw;
-  height: 65vh;
+  width: 80vw;
+  height: 70vh;
   margin: 0 40px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .main-screen .main-screen__column:first-child {
@@ -106,59 +108,6 @@ img {
   text-align: center;
   font-size: 40px;
   margin-bottom: 20px;
-  padding: 5px 0;
-  border-top: 2px solid var(--color-dark-brown);
-  border-bottom: 2px solid var(--color-dark-brown);
-}
-
-#todo-form {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-#todo-form input {
-  width: 90%;
-  font-size: 20px;
-  text-align: center;
-  font-family: 'Boogaloo', cursive;
-  background-color: transparent;
-  border: none;
-}
-
-#todo-form input::placeholder {
-  color: #6d4c41;
-}
-
-#todo-form input:focus {
-  outline: 0;
-}
-#todo-form input[type='text'] {
-  color: var(--color-dark-brown);
-}
-
-#todo-list {
-  list-style: none;
-  padding: 0;
-  width: 60%;
-}
-
-#todo-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-#todo-list li span {
-  font-size: 20px;
-  margin-bottom: 0;
-}
-
-#todo-list li button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
 }
 
 .quote {
@@ -181,6 +130,95 @@ img {
   }
 }
 .main-screen .main-screen__column:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 33%;
   animation: QuoteAnimation 0.3s ease-in-out;
+}
+.main-screen .main-screen__column:last-child .quote span {
+  color: var(--color-dark-brown);
+}
+
+.main-screen .main-screen__column .quote {
+  width: 100%;
+}
+
+.main-screen .main-screen__column .quotes {
+  color: var(--color-dark-brown);
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 870px) {
+  img {
+    height: 180vh;
+  }
+
+  #header input {
+    width: 50%;
+  }
+  .main {
+    width: 100%;
+    height: 100%;
+  }
+  .main-screen {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    height: 100%;
+  }
+
+  .main-screen__column {
+    margin-bottom: 100px;
+  }
+  .main-screen__column--clock {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  .clock__hours,
+  .clock__minutes {
+    font-size: 100px;
+    margin-bottom: 0;
+  }
+
+  .main-screen .main-screen__column:first-child {
+    width: 100%;
+  }
+
+  .main-screen .main-screen__column:nth-child(2) {
+    width: 100%;
+  }
+  .main-screen__column--regionAndweather {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .main-screen__column--regionAndweather > * {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  .main-screen .main-screen__column:last-child {
+    width: 100%;
+  }
+  .main-screen .main-screen__column:last-child .quote {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .main-screen .main-screen__column:last-child .quotes {
+    display: flex;
+    align-items: center;
+  }
+
+  .clock__seconds {
+    display: block;
+    width: 5px;
+    height: 65px;
+    background-color: var(--color-dark-brown);
+    animation: Clockseconds 1s ease-in-out infinite;
+    margin: 0 40px;
+  }
 }
